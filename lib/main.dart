@@ -4,7 +4,7 @@ import 'package:home_widget/home_widget.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // HomeWidget.setAppGroupId('');
-  await HomeWidget.registerInteractivityCallback(interactiveCallbackCounter);
+
   runApp(const MyApp());
 }
 
@@ -35,6 +35,7 @@ class _HomeWidgetTestViiewState extends State<HomeWidgetTestViiew>
   @override
   void initState() {
     super.initState();
+    HomeWidget.registerInteractivityCallback(interactiveCallbackCounter);
     WidgetsBinding.instance.addObserver(this);
   }
 
